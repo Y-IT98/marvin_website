@@ -32,15 +32,55 @@
         <main>
             <section>
                 <article>
-                    <h2>Contact me</h2>
-                    <p>I am always keen on meeting new people and exploring new opportunities, if you want to get in touch
-                    you can email me:
-                        <br>
-                    marvinjponan@gmail.com</p>
-                    <picture>
-                        <source srcset="../img/tofino_photoshopped/marvin_at_beach.jpg" type="image/jpeg">
-                        <img src="../img/tofino/marvin_beach2.jpg" alt="marvin looking at open water">
-                    </picture>
+                    <div id="contact_text">
+                        <div id="grid-text-format">
+                            <h2>Contact me:</h2>
+                            <p>I am always keen on meeting new people and exploring new opportunities, if you want to get in touch
+                            you can email me:
+
+                            marvinjponan@gmail.com</p>
+                            <br>
+                            <p>Or fill out this form your info and project idea and I will reach out to you.</p>
+                        </div>
+                        <form action="#" method="post">
+                            <div class="form_group">
+                                <div>
+                                    <label for="name">Name</label>
+                                    <input type="text"
+                                           id="name"
+                                           name="name"
+                                           placeholder="Name"
+                                           required>
+                                </div>
+                                <div>
+                                    <label for="email">Email</label>
+                                    <input type="email"
+                                           name="email"
+                                           id="email"
+                                           placeholder="Email"
+                                           required>
+                                </div>
+                                <div>
+                                    <label for="subject">Subject</label>
+                                    <input type="text"
+                                           id="subject"
+                                           name="subject"
+                                           placeholder="Subject"
+                                           required>
+                                </div>
+                                <div>
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" placeholder="Type here" required></textarea>
+                                </div>
+                                <button type="submit" id="form_submit">Submit</button>
+                            </div>
+                        </form>
+
+                        <picture id="contact_picture">
+                            <source srcset="../img/tofino_photoshopped/marvin_at_beach.jpg" type="image/jpeg">
+                            <img src="../img/tofino/marvin_beach2.jpg" alt="marvin looking at open water">
+                        </picture>
+                    </div>
                 </article>
 
             </section>
@@ -48,10 +88,10 @@
         <footer>
             <section class="social_media">
                 <ul>
-                    <li><a href="https://www.instagram.com/marvin.ponan/" target="_blank">Instagram</a></li>
-                    <li><a href="https://www.linkedin.com/in/marvin-pon-an-870b20252/" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://www.tiktok.com/@capturedbymarv" target="_blank">TikTok</a></li>
-                    <li><a href="https://www.facebook.com/marvin.ponan/" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/capturedbymarv/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/marvin-pon-an-870b20252/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://www.tiktok.com/@capturedbymarv" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+                    <li><a href="https://www.facebook.com/marvin.ponan/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
                 </ul>
             </section>
         </footer>
