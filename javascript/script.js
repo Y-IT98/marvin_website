@@ -10,3 +10,15 @@ navElement.addEventListener('click', () => {
     navElement.classList.remove("site_nav_open")
     hamburger_element.classList.remove("hamburger_open")
 })
+
+
+$(document).ready(function(){
+
+    $('.img_carousel').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true
+    });
+});

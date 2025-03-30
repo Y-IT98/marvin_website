@@ -2,7 +2,12 @@
 
 @import "normalize.css";
 
+@import"slick-1.8.1/slick/slick.css";
+
+@import"slick-1.8.1/slick/slick-theme.css";
+
 @import "fonts.css";
+
 
 :root {
     --paragraph-font:"JetBrains Mono";
@@ -62,14 +67,19 @@ ul{
     margin:0 ;
 }
 ol{
-    list-style-type: upper-roman;
+    list-style-type: decimal-leading-zero;
     margin: 0;
     color: #f1f1f1;
 }
 a{
     text-decoration: none;
+    color: var(--nav-text);
+    font-size: 12px;
 }
-
+a:hover, a:focus{
+    color: var(--platinum);
+    transition: all 0.4s;
+}
 p{
     color: var(--platinum);
     margin-left: 7px;
@@ -84,8 +94,14 @@ blockquote{
     padding: 10px;
     margin-left: 30px;
 }
+cite{
+    background-color: var(--rich-black);
+    border-radius: 5px;
+}
 pre{
-    display: inline-block;
+    display: flex;
+    overflow: auto;
+    max-width: 100%;
     border: 3px solid #ddd;
     border-radius: 10px;
     background-color: var(--yinmn-blue);
@@ -93,8 +109,12 @@ pre{
     padding: 20px;
     margin-left: 30px;
     margin-right: 5px;
+
 }
 table{
+    table-layout:fixed;
+    word-break: break-word;
+
     background-color: var(--yinmn-blue);
     border: var(--rich-black) 2px solid;
     margin-bottom: 15px;
@@ -103,6 +123,12 @@ table{
 
 
 
+}
+tr:nth-child(1){
+    background-color: var(--oxford-blue);
+}
+tr:nth-child(even){
+    background-color: var(--silver-lake-blue);
 }
 th{
     background-color: var(--silver-lake-blue);
@@ -115,6 +141,7 @@ td{
     row-gap: 10px;
 
 }
+
 footer{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -286,7 +313,7 @@ form input{
 .wrapper{
     display: flex;
     flex-direction: column;
-    max-width: 1500px;
+    max-width: 1024px;
     min-height: 100vh;
     margin: auto ;
     background-color: var(--rich-black);
@@ -321,6 +348,10 @@ form input{
     cursor: pointer;
     display: inline-block;
     width:90px;
+}
+#pre_container{
+    flex:1;
+    min-width: 0;
 }
 /*Media Queries*/
 @media (min-width: 320px) {
@@ -388,7 +419,7 @@ form input{
 }
 @media (min-width:700px) {
     header{
-        max-width: 1500px;
+        max-width: 1024px;
         width: 100%;
     }
 
@@ -469,6 +500,8 @@ form input{
         grid-column: 1;
         grid-row: 6;
     }
+    
+    
 
     #form_submit{
         grid-column: 1;
